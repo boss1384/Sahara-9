@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sahara Flash LiveScore</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+
+    <div class="logo">
+        <h1>Sahara <span>Flash</span></h1>
+        <p>LiveScore Pro Max</p>
+    </div>
+
+    <nav>
+        <ul>
+            <li onclick="showSection('live')">Live</li>
+            <li onclick="showSection('fixtures')">Fixtures</li>
+            <li onclick="showSection('standings')">Standings</li>
+            <li onclick="showSection('news')">News</li>
+        </ul>
+    </nav>
+
+    <div class="search">
+        <input type="text" id="searchInput" placeholder="Search teams..." onkeyup="searchTeams()">
+    </div>
+
+</header>
+
+<!-- MAIN -->
+<main>
+
+<!-- LIVE -->
+<section id="live-section" class="section active">
+
+    <h2 class="section-title">🔴 Live Matches</h2>
+
+    <div id="live-matches" class="matches-grid">
+        <p>Loading live matches...</p>
+    </div>
+
+</section>
+
+<!-- FIXTURES -->
+<section id="fixtures-section" class="section">
+
+    <h2 class="section-title">📅 Upcoming Fixtures</h2>
+
+    <div id="fixtures" class="matches-grid">
+        <p>Loading fixtures...</p>
+    </div>
+
+</section>
+
+<!-- STANDINGS -->
+<section id="standings-section" class="section">
+
+    <h2 class="section-title">🏆 Standings</h2>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Team</th>
+                <th>Points</th>
+            </tr>
+        </thead>
+
+        <tbody id="standings-body">
+            <tr><td colspan="3">Loading...</td></tr>
+        </tbody>
+
+    </table>
+
+</section>
+
+<!-- NEWS -->
+<section id="news-section" class="section">
+
+    <h2 class="section-title">📰 News</h2>
+
+    <div id="news-content">
+        <p>Loading news...</p>
+    </div>
+
+</section>
+
+</main>
+
+<!-- SCRIPT -->
+<script src="script.js"></script>
+
+</body>
+</html>
